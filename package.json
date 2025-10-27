@@ -1,0 +1,22 @@
+{
+  "name": "wsd-care-tracker",
+  "version": "1.0.0",
+  "description": "Mobile-friendly web app for The Welfare of Stray Dogs (WSD) NGO to track and manage care tasks for stray dogs",
+  "main": "server/index.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && node seed-data.js"
+  },
+  "keywords": ["NGO", "dog-care", "volunteer-management", "react", "mobile"],
+  "author": "WSD Mumbai",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
